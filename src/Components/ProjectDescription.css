@@ -1,0 +1,187 @@
+body, html{
+    height:100%;
+    width: 100%;
+    margin:0px;
+    padding: 0px;
+    font-size: 18px;
+    line-height: 1.8 em;
+}
+ul{
+    padding-left:1.5em;
+}
+h1,h3,p{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: #ddd;
+    transition:250ms; 
+    padding: 0px;
+    margin: 0px;
+}
+a:hover{
+    opacity: .5;
+}
+.title{
+    color:rgb(45, 105, 143);
+    text-transform: uppercase;
+    font-weight: normal;
+    padding-top: 2em;
+    margin: 0px;
+}
+.photoBlur2{
+    height:auto;
+    height:100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    position: relative;
+}
+.options{
+
+    padding:.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color:rgb(56, 56, 56);
+}
+.optionPair{
+    margin:0px;
+    display:flex;
+    justify-content: space-evenly;
+}
+.opttext{
+    margin:0px;
+    height:100%;
+    width: 100%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.option2 a,.option1 a{
+    display:block;
+    margin: 10px;
+    padding:5px;
+    font-weight: bold; 
+    border-radius: 1em;
+    color:#ddd;
+    height: 80px;
+    width: 110px;
+    background:rgba(56,56,56, 0.7);
+    font-size: 16px;
+}
+
+#githubLink{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapperImage{
+    width:100%;
+    height: auto;
+    display: flex;
+    min-height:100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../code.jpg'); 
+    background-color:rgb(255, 255, 255);
+    background-attachment:fixed;
+}
+.projectContent{
+    flex-direction: column;
+    position: relative;
+    min-height:100%;
+    height:auto;
+    width:100%;
+    top:0%;
+    left:0%;
+    /* background: rgb(40, 46, 52, .8); */
+    color: rgb(56, 56, 56);
+    text-align: center;
+}
+.projectWrapper{
+    height:auto;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas: 
+    "github"
+    "desc"
+    "tech"
+    "obj"
+    ;
+    
+    gap:.5em;
+}
+.heading{
+    text-align: left;
+    padding-left:.5em;
+    color:rgb(45, 105, 143);
+}
+.objectives{
+    grid-area:obj;
+    padding: 0em .5em 0em .5em;
+    text-align: left;
+    overflow: hidden;
+}
+.highPoints{
+    grid-area: tech;
+    text-align: left;
+    padding: 0em .5em 0em .5em;
+    overflow:hidden;
+}
+.description{
+    text-align: left;
+    grid-area: desc;
+    overflow:hidden;
+    padding: 0em .5em 0em .5em;
+}
+#description{
+    padding-left:.5em;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    text-align: left;
+}
+#close{
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    top: 1.2em;
+    left: 1.2em;
+    stroke:rgb(56, 56, 56);
+}
+.githubWrapper{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    bottom: 1em;
+    grid-area:github;
+}
+#close:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: 250ms;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .projectContent{
+        margin:auto;
+        max-width:1400px;
+        min-height:100%;
+        height:auto;
+    }
+    .projectWrapper,.highPoints,.description{
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width: 1800px){
+    .projectWrapper,.highPoints,.description{
+        font-size: 24px;
+    }
+
+}

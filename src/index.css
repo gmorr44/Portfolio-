@@ -1,0 +1,180 @@
+body, html{
+  font-family:'Roboto', sans-serif,Arial, Helvetica;
+  height: 100%;
+  margin:0px;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8 em;
+}
+h1,h2, p {
+  margin:0px;
+  padding: 0px;
+}
+
+a{
+  text-decoration: none;
+  color:#ddd;
+}
+
+/* Background images for each section*/
+/* Includes sizing info and urls of photos */
+
+.img1{
+  background-image: url('laptopdark.jpg') ;  
+  min-height: 100%;
+  height: auto;
+}
+.img2{
+  background-image: url('code.jpg') ; 
+  min-height: 100%;
+  height:auto;
+}
+.img3{
+  background-image: url('code.jpg') ;
+  min-height: 100%;
+  height:auto;
+}
+.img4{
+  background-image: url('laptopdark.jpg') ;
+  min-height: 100%;
+  height: auto;
+}
+
+/*pimg images are the background images for the body of the website*/
+
+.img1, .img2, .img3, .img4{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+}
+
+
+/******************************************************/
+/******************Media Query Section*****************/
+/******************************************************/
+
+/*****Screen sizes 400 pixels and up*****/
+/* Main changes are skills list column to row and name font */
+@media only screen and (min-width:400px){
+  #jobTitle{
+      font-size: 1.1em;
+  }
+  .navLink{
+      font-size: 1.2em;
+  }
+  #skillsTxt{
+      flex-direction: row;
+  } 
+  #skillsRight{
+      padding-top:0em;
+  }
+}
+
+/*Small devices (portrait tablets and large phones, 600px and up)*/
+/* Main changes are .projectImages 2 columns, nav, .projectImages size, name font */
+@media only screen and (min-width: 600px) {
+  #name{
+      font-size: 2.5em;
+  }
+  #jobTitle{
+      font-size: 1.25em;
+  }
+  .navLink{
+      font-size: 1.3em;
+  }
+  .navWrapper{
+      min-height:100vh;
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows:repeat repeat(5,1fr);
+      grid-template-areas: 
+      ". . ."
+      " nametag nametag nametag "
+      " nav nav nav "
+      " . soc ."
+      ". . ."
+      ; 
+  }
+  .projectImages{
+      grid-template-columns: repeat(2, 250px);
+      grid-template-rows: repeat(3, 250px);
+      grid-template-areas: 
+      "box1 box2"
+      "box3 box4"
+      "box5 box6"
+      ;
+      gap: 2em; 
+  }
+}
+/*devices (laptops/desktops, up to 700px)*/
+/* Main changes are Font-size, .aboutSection  */
+@media only screen and (min-width: 700px){
+  body, html{
+      font-size: 18px;
+  }
+  #skillsTxt{
+      flex-direction: row;
+  }
+  .aboutSection{
+      margin:auto;
+      max-width: 1200px;
+      grid-template-columns: 1fr 2fr;
+      /* grid-template-rows: repeat(3, 1fr) ;  */
+      grid-template-areas: 
+      "head text" 
+      "skillhead skilltxt"
+      "inthead inttext"
+      ;
+      gap:1em;
+      align-content: center;
+      justify-content: center;
+  }
+  #aboutHead{
+      text-align: center;
+      font-size: larger;
+  }
+  #skillsHead{
+      text-align: center;
+      font-size: larger;
+  }
+  #interestsHead{
+      text-align: center;
+      font-size: larger;
+  }
+}
+
+/*Large devices (laptops/desktops, 992px and up)*/
+/* Main changes are .projectImages 3 columns, message split, name font */
+@media only screen and (min-width: 992px){
+  #name{
+      font-size: 4em;
+  }
+  #jobTitle{
+      font-size: 1.75em;
+  }
+  .projectImages{
+      grid-template-columns: repeat(3, 300px);
+      grid-template-rows: repeat(2, 300px);
+      grid-template-areas: 
+      "box1 box2 box3"
+      "box4 box5 box6"
+      ;
+  }
+  .contactStatement{
+      padding-top: 0em;
+  }
+  .contactContainer{
+      flex-direction: row;
+      max-width: 1400px;
+      padding:1em;
+      margin:auto;
+  }
+  .sendMessage{
+      border:none;
+      padding:1em;
+  }
+}
+ 
