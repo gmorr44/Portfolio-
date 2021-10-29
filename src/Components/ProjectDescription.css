@@ -20,9 +20,6 @@ a{
     padding: 0px;
     margin: 0px;
 }
-a:hover{
-    opacity: .5;
-}
 .title{
     color:rgb(45, 105, 143);
     text-transform: uppercase;

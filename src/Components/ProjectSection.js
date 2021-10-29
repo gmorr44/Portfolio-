@@ -8,10 +8,9 @@ const ProjectSection = ({projects}) => {
         <div className="img3" id="pimg33">
             <div className="photoBlur2">
                 <h1 className= "sectionName">-Projects-</h1>
-                <div className="projectImages">
+                <div  className="projectImages">
                     {projects.map((proj) => (
                         <ProjectCard 
-                        onClick ={()=>{console.log("clicked card")}}
                         key={proj.name}
                         cardLogo = {proj.cardLogo}
                         name = {proj.name}
